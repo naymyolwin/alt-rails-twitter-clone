@@ -52,42 +52,68 @@
           </p>
         </div>
         <div class="log-in col-xs-4 col-xs-offset-1">
-          <%# Form Start %>
-          <%= form_with model: @user do |u| %>
+          <form>
             <div class="form-group">
-              <%= u.text_field :username, class:'form-control username', placeholder: 'Username' %>
+              <input
+                type="text"
+                class="form-control username"
+                placeholder="Username"
+              />
             </div>
             <div class="form-group col-xs-8">
-              <%= u.text_field :password, class:'form-control password', placeholder: 'Password' %>
+              <input
+                type="password"
+                class="form-control password"
+                placeholder="Password"
+              />
             </div>
-            <%= u.submit 'Log in', class:'btn btn-default btn-primary col-xs-3 col-xs-offset-1', id:'log-in-btn' %>
+            <button
+              id="log-in-btn"
+              class="btn btn-default btn-primary col-xs-3 col-xs-offset-1"
+            >
+              Log in
+            </button>
             <label>
               <input type="checkbox" />
               <span>Remember me</span>
               <span> &#183; </span>
             </label>
             <a href="#">Forgot password?</a>
-          <% end %>
-          <%# Form End %>
+          </form>
         </div>
         <div class="sign-up col-xs-4 col-xs-offset-1">
-          <%# Form Start %>
-          <%= form_with model: @user do |u| %>
+          <form>
             <div class="new-to-t">
               <p><strong>New to Twitter?</strong><span> Sign Up</span></p>
             </div>
             <div class="form-group">
-              <%= u.text_field :password, class:'form-control username', placeholder: 'Username' %>
+              <input
+                type="text"
+                class="form-control username"
+                placeholder="Username"
+              />
             </div>
             <div class="form-group">
-              <%= u.text_field :email, class:'form-control email', placeholder: 'Email' %>
+              <input
+                type="email"
+                class="form-control email"
+                placeholder="Email"
+              />
             </div>
             <div class="form-group">
-              <%= u.text_field :password, class:'form-control password', placeholder: 'Password' %>
+              <input
+                type="password"
+                class="form-control password"
+                placeholder="Password"
+              />
             </div>
-            <%= u.submit 'Sign up for Twitter', class:'btn btn-default btn-warning pull-right', id:'sign-up-btn' %>
-          <% end %>
-          <%# Form End %>
+            <button
+              id="sign-up-btn"
+              class="btn btn-default btn-warning pull-right"
+            >
+              Sign up for Twitter
+            </button>
+          </form>
         </div>
       </div>
     </div>
