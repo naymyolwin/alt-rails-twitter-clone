@@ -26,9 +26,10 @@ class SessionsController < ApplicationController
         if session
             user = session.user
             render json: {
-            authenticated: true,
-            username: user.username
-        }
+                authenticated: true,
+                username: user.username
+            }
+            
         else
             render json: {
             authenticated: false

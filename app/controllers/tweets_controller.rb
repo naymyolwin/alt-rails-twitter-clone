@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
           @tweet = user.tweets.new(tweet_params)
           
           if @tweet.save
-            byebug
+          
             render 'tweets/create'
           else
             render json: { success: false }
@@ -25,6 +25,13 @@ class TweetsController < ApplicationController
     end
 
     def destroy
+      @tweet = Tweet.find_by(id: params[:id])
+      
+      if @tweet.destroy
+        render json: { success: true }
+      else
+        render json: { success: false }
+      end
     end
 
     private
