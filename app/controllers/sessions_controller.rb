@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:user][:username])
        
         if @user and @user.password = params[:user][:password]
-            #do
             session = @user.sessions.create
             cookies.permanent.signed[:twitter_user_session_token] = {
                 value: session.token,
