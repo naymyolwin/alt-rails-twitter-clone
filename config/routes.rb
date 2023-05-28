@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # USERS
   #resources :users
   post 'users' => 'users#create'
+  get 'users/:username/tweets' => 'users#count'
   # SESSIONS
   #resources :sessions
   post 'sessions' => 'sessions#create'
