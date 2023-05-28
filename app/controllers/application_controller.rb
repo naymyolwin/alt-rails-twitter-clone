@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   private
     def current_user
-      token = cookies.permanent.signed[:twitter_user_session_token]
+      token = cookies.permanent.signed[:twitter_session_token]
       session = Session.find_by(token: token)
       if session.present?
         @current_user = session.user
