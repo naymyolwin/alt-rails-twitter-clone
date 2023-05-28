@@ -20,10 +20,7 @@ class SessionsController < ApplicationController
     end
 
     def authenticated
-        #token = cookies.permanent.signed[:twitter_user_session_token]
-        #session = Session.find_by(token: token)
         if current_user
-            #user = session.user
             render json: {
                 authenticated: true,
                 username: current_user.username
