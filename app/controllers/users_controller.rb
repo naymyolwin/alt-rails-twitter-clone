@@ -5,7 +5,8 @@ class UsersController < ApplicationController
       if @user.save
         render json: {
           user: {
-            username: @user.username
+            username: @user.username,
+            email: @user.email
           }
         }
       else
